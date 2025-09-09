@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/container/tutorial_container.dart';
+import 'package:flutter_application_2/input_widgets/input_widgets.dart';
 import 'package:flutter_application_2/latihan/detail_page.dart';
 import 'package:flutter_application_2/latihan/lake_screen.dart';
 import 'package:flutter_application_2/latihan/pavlova_screen.dart';
@@ -68,6 +69,32 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.push(context, CupertinoPageRoute(builder: (context) => PavlovaScreen()),
               );
             }, child: const Text("Pavlova Screen")
+            ),
+              SizedBox(height: 20,),
+              TextButton(onPressed: () {
+              Navigator.push(context, CupertinoPageRoute(builder: (context) => PavlovaScreen()),
+              );
+            }, child: const Text("Pavlova Screen")
+            ),
+              SizedBox(height: 20,),
+              OutlinedButton(onPressed: () {
+              Navigator.push(context, CupertinoPageRoute(builder: (context) => PavlovaScreen()),
+              );
+            }, child: const Text("Pavlova Screen")
+            ),
+              SizedBox(height: 20,),
+              IconButton(onPressed: () {
+              Navigator.push(context, CupertinoPageRoute(builder: (context) => PavlovaScreen()),
+              );
+            }, 
+            icon: Icon(Icons.arrow_right),
+            tooltip: "Ke Page Farm Lembang",
+            ),
+              SizedBox(height: 20,),
+              FilledButton(onPressed: () {
+              Navigator.push(context, CupertinoPageRoute(builder: (context) => InputWidgets()),
+              );
+            }, child: const Text("Input Widgets"),
             ),
           ],
         ),
