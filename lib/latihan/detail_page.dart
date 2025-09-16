@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/latihan/favorrite_boutton.dart';
 import 'package:flutter_application_2/latihan/tourism_place.dart';
 
 class DetailPage extends StatelessWidget {
@@ -15,7 +16,22 @@ class DetailPage extends StatelessWidget {
         child : SingleChildScrollView(
         child: Column(
         children: [
-          Image.asset(place.imageAsset),
+          Stack(children: [
+            Image.asset(place.imageAsset),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: IconButton(onPressed: () {
+                    Navigator.of(context).pop();
+                  }, icon: Icon(Icons.arrow_back, color: Colors.white,)),
+                ),
+                FavorriteBoutton(),
+              ],
+            )
+            ],
+          ),
           Container(
             padding: const EdgeInsets.all(10),
             child: Text(place.name, style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
