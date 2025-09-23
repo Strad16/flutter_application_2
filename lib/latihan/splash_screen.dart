@@ -22,12 +22,21 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.indigo,
       body: Center(
-        child: Text(
-          "Selamat Datang Di Wisata Bandung",
-          style: TextStyle(color: Colors.white, fontSize: 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            Icon(Icons.flight, size: 96, color: Colors.white),
+            SizedBox(height: 16),
+            Text(
+              'Contoh Wisata Bandung',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+            SizedBox(height: 8),
+            Text('Memuat...', style: TextStyle(color: Colors.white70)),
+          ],
         ),
       ),
     );
